@@ -5,12 +5,20 @@
     // grid-area: "a b b b";
     grid-template-columns: 1fr 3fr;
     gap: 30px;
-    justify-content: stretch;
+    // justify-content: stretch;
     padding-inline: 165px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    // height: 518px;
 
     .person__card {
-      height: 100%;
+
+      height: auto;
+      // max-width: 255px;
+      justify-self: flex-start;
       // align-self: stretch;
+      // height: 518px;
 
       .person__info {
         height: 100%;
@@ -53,7 +61,7 @@
 
       .card {
         width: 100%;
-        // max-width: 255px;
+        max-height: 244px;
         height: 100%;
         margin-bottom: 0;
 
