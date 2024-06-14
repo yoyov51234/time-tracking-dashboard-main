@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+// variables
+$base: 16;
+
+:root {
+  color: white;
+  --dark-blue: #1C204B;
+  --light-blue: #5747EA;
+  --primary: #BBC0FF;
+  --secondary: #7078C9;
+  font-family: 'Rubik';
+  --bg-orange: #FF8B64;
+  --bg-light-blue: #55C2E6;
+  --bg-light-red: #FF5E7D;
+  --bg-green: #4BCF82;
+  --bg-purple: #7335D2;
+  --bg-yellow: #F1C75B;
+  --icon-yellow: #E6A532;
+  --icon-purple: #5A1CBB;
+  --icon-green: #29BA66;
+  --icon-red: #F04667;
+  --icon-blue: #3F9CBB;
+  --icon-orange: #D96C47;
+
+
+
+
+}
+
+
+
+@function size($target, $baseF: $base) {
+  @return $target/$baseF * 1em;
+}
+
+@function fsize($target, $baseF: $base) {
+  @return $target/$baseF * 1rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: size(81, ) size(24, );
+  background-color: black;
+
+  .box {
+    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // row-gap: size(24, );
+
+
+    .card {
+      background-color: var(--dark-blue);
+    }
+
+    .card--top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: size(15, );
+      margin-bottom: size(24, );
+
+      .card__user {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: size(15, );
+        background-color: var(--light-blue);
+        width: 100%;
+        padding: size(35, ) size(39, ) size(34, ) size(32, );
+        column-gap: size(20, );
+
+        .card__image {
+          width: 64px;
+          height: 64px;
+
+
+          & img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .card__user-name {
+          .card__title {
+            font-size: fsize(15, );
+            color: var(--primary);
+          }
+
+          .card__name {
+            font-size: fsize(24, );
+            font-weight: 300;
+          }
+        }
+
+      }
+
+      .card__tail-info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-block: size(24, );
+        color: var(--secondary);
+        text-align: center;
+
+
+
+
+
+        & a {
+          display: inline-block;
+          flex: 1;
+          font-size: fsize(18, );
+
+        }
+      }
+
+    }
+
+    .card--wrapper {
+      // display: ;
+      position: relative;
+      height: 160px;
+      margin-bottom: size(24, );
+      border-radius: size(15, );
+      background-image: url(./images/icon-work.svg);
+      background-repeat: no-repeat;
+      background-position: right 11px;
+      background-color: var(--bg-orange);
+      justify-content: flex-end;
+      display: flex;
+      flex-direction: column;
+      border-radius: size(15, );
+      overflow: hidden;
+
+
+
+      // .card__icon {
+      //   position: absolute;
+      //   right: 11px;
+      //   top: -14.4px;
+      //   z-index: -1;
+      // }
+
+      .card__detail {
+
+        display: flex;
+        flex-direction: column;
+        // align-self: flex-end;
+        justify-content: flex-end;
+
+        // justify-content: space-between;
+        column-gap: size(6, );
+        border-radius: inherit;
+
+        .card__detail-box {
+          padding: 24px;
+          height: 122px;
+          background-color: var(--dark-blue);
+
+        }
+
+        .card__category {
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          background-color: var(--dark-blue);
+
+          .type_title {
+            font-size: size(18, );
+            font-weight: 500;
+
+          }
+
+          .eclips {
+            font-size: size(18, );
+            font-weight: 500;
+          }
+
+
+
+        }
+
+        .card__category-detail {
+          // height: 122px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .card__category--hours {
+            font-size: size(32, );
+            font-weight: 500;
+          }
+
+          .card__last-week {
+            font-size: size(15, );
+          }
+
+
+        }
+
+      }
+    }
+  }
+}

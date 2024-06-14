@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// variables
+$base: 16;
+
+:root {
+  --wrapper-bgc: #0E1323;
+  color: white;
+  --dark-blue: #1C204B;
+  --light-blue: #5747EA;
+  --primary: #BBC0FF;
+  --secondary: #7078C9;
+  --active: #33397A;
+
+  --bg-orange: #FF8B64;
+  --bg-light-blue: #55C2E6;
+  --bg-light-red: #FF5E7D;
+  --bg-green: #4BCF82;
+  --bg-purple: #7335D2;
+  --bg-yellow: #F1C75B;
+  --icon-yellow: #E6A532;
+  --icon-purple: #5A1CBB;
+  --icon-green: #29BA66;
+  --icon-red: #F04667;
+  --icon-blue: #3F9CBB;
+  --icon-orange: #D96C47;
+
+  font-family: 'Rubik';
+
+}
+
+
+
+@function size($target, $baseF: $base) {
+  @return $target/$baseF * 1em;
+}
+
+@function fsize($target, $baseF: $base) {
+  @return $target/$baseF * 1rem;
+}
+
+.wrapper {
+  background-color: black;
+  padding: size(81, ) size(24, );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: size(24, );
+
+  .person__card {
+    height: 203px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    justify-content: flex-start;
+    align-items: center;
+
+
+
+    .person__info {
+      display: flex;
+      flex-direction: row;
+      padding: size(35, ) size(39, ) size(34, ) size(32, );
+      border-radius: 15px;
+      background-color: var(--light-blue);
+      // height: 133px;
+      column-gap: 20px;
+      align-items: center;
+      width: 100%;
+
+      .person__image {
+        width: 64px;
+        height: 64px;
+        // width: 100%;
+        border-radius: 50%;
+      }
+
+      .person__data {
+        .person__report {
+          color: var(--primary);
+          margin-bottom: size(4, );
+        }
+
+        .person__name {
+          font-weight: 300;
+          font-size: size(24, );
+        }
+      }
+
+
+
+
+
+    }
+
+    .nav {
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding-block: size(25, );
+      color: var(--secondary);
+
+      .nav_option {
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+        }
+
+
+      }
+
+
+
+    }
+
+
+
+
+
+  }
+
+  .cards {
+
+
+
+    .card {
+      width: 100%;
+      height: 160px;
+      // background-color: ;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 24px;
+      border-radius: 15px;
+      overflow: hidden;
+      background-position: right 20px top -10.91px;
+      // background-image: url(../images/icon-work.svg);
+      background-repeat: no-repeat;
+
+      // & 
+
+      &:hover {
+        cursor: pointer;
+
+        .card__details {
+          background-color: var(--active);
+        }
+
+      }
+
+
+
+      .card__details {
+        padding: 24px;
+        background-color: #1C204B;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        row-gap: 6px;
+
+        .card__details-top,
+        .card__details-bottom {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          .title {
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          .current {
+            font-size: 32px;
+            font-weight: 300;
+          }
+
+          .previous {
+            font-size: 15px;
+            font-weight: 400;
+            color: #BBC0FF;
+            align-self: center;
+
+          }
+
+        }
+
+        .card__details-bottom {
+          align-items: flex-end;
+        }
+
+      }
+    }
+
+    .card-item-0 {
+      background-color: var(--bg-orange)
+    }
+
+    .card-item-1 {
+      background-color: var(--bg-light-blue);
+    }
+
+    .card-item-2 {
+      background-color: var(--bg-light-red)
+    }
+
+    .card-item-3 {
+      background-color: var(--bg-green)
+    }
+
+    .card-item-4 {
+      background-color: var(--bg-purple)
+    }
+
+    .card-item-5 {
+      background-color: var(--bg-yellow)
+    }
+
+    // .card-item-6 {
+    //   background-color: rebeccapurple;
+    // }
+
+    // .card-item-7 {
+    //   background-color: rebeccapurple;
+    // }
+  }
+
+}
